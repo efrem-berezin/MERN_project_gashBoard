@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useState } from 'react'
 import { LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search, SettingsOutlined, ArrowDropDownOutlined} from "@mui/icons-material"
 import FlexBetween from "./../components/FlexBetween"
 import { useDispatch } from "react-redux"
@@ -19,11 +20,18 @@ import {
 } from "@mui/material";
 
 const Navbar = ({
+   user,
    isSidebarOpen,
     setIsSidebarOpen
 }) => {
     const dispatch = useDispatch();
     const theme = useTheme();
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const isOpen = Boolean(anchorEl);
+    const handleClick = (event) => setAnchorEl(event.currentTarget);
+    const handleCLose = () => setAnchorEl(null);
+
   return <AppBar
     sx={{
         position: "static",
@@ -64,6 +72,19 @@ const Navbar = ({
         <SettingsOutlined sx={{ fontSize : "25px"}}/>
 
       </IconButton>
+
+      <FlexBetween>
+        <Button onClick={handleClick} 
+        sx={{ display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            textTransform: "none",
+            gap: "1rem",
+            }}
+        >
+
+        </Button>
+      </FlexBetween>
     </FlexBetween>
     </Toolbar>
   </AppBar>

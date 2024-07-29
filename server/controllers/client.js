@@ -9,7 +9,7 @@ export const getProducts = async (req, res) => {
             products.map( async (product) => {
                 const stat = await ProductStat.find({
                     productId: product._id
-                })
+                });
                 return {...product._doc, stat}
             })
         );
@@ -18,4 +18,4 @@ export const getProducts = async (req, res) => {
     } catch (error) {
         res.status(404).json({ message: error.message })
     }
-}
+};

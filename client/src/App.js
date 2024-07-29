@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 
 import Layout from "./scenes/layout/index";
 import Dashboard from "./scenes/dashboard/index";
+import Products from "./scenes/products/index.jsx"
 
 function App() {
   const mode = useSelector((state) => state.global.mode)

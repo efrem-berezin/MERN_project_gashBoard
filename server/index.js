@@ -29,7 +29,7 @@ app.use(cors());
 
 
 /* ROUTES */
-app.use("/api/client", clientRoutes);
+app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/managment", managmentRoutes);
 app.use("/sales", salesRoutes);

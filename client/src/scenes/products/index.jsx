@@ -109,6 +109,8 @@ const Products = () => {
               "& > div": { gridColumn: isNonMobile ? undefined : "span 4"}
             }}
             >
+
+              
               {data.map(
                 ({
                 _id,
@@ -135,7 +137,7 @@ const Products = () => {
               )}
           </Box>
         ) : (
-          <>Loading...</>
+          <>Loading..</>
         )}
     </Box>  
    )

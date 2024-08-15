@@ -137,7 +137,7 @@ const Products = () => {
               )}
           </Box>
         ) : (
-          <>Loading..</>
+          <>Loading</>
         )}
     </Box>  
    )

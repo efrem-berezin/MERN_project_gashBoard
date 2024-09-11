@@ -5,13 +5,16 @@ import { useGetCustomersQuery } from "../../state/api.js";
 import { DataGrid } from "@mui/x-data-grid"
 
 
-const Dashboard = () => {
-  
+const Customers = () => {
+  const theme = useTheme();
+  const { data, isLoading } = useGetCustomersQuery();
+  console.log("data", data)
+
   return (
     <div>
-      DashboardTest
+      Customers
     </div>
   )
 }
 
-export default Dashboard
+export default Customers

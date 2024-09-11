@@ -12,7 +12,8 @@ import {
     useTheme,
     useMediaQuery,
   } from "@mui/material";
-  import Header from "../../components/Header.jsx";
+  // import Header from "../../components/Header.jsx";
+  import Header from "../../components/Header.jsx"
   import { useGetProductsQuery } from "../../state/api.js";
 
 const Product = ({

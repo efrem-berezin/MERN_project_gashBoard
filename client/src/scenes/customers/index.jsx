@@ -35,12 +35,49 @@ const Customers = () => {
       headerName: "Country",
       flex: 0.4
     },
+    { field: "occupation",
+      headerName: "Occupation",
+      flex: 1
+    },
+    { field: "role",
+      headerName: "Role",
+      flex: 0.5
+    },
+    
   ]
 
   return (
     <div>
-      <Box>
+       <Box m="1.5rem 2.5rem">
         <Header title="CUSTOMERS" subtitle="List of Customers" />
+        <Box 
+        mt="40px"
+        height="75vh"
+        sx={{
+          "& .MuiDataGrid-root": {
+            border: "none",
+          },
+          "& .MuiDataGrid-cell": {
+            borderBottom: "none",
+          },
+          "& .MuiDataGrid-columnHeaders": {
+            backgroundColor: theme.palette.background.alt,
+            color: theme.palette.secondary[100],
+            borderBottom: "none",
+          },
+          "& .MuiDataGrid-virtualScroller": {
+            backgroundColor: theme.palette.primary.light,
+          },
+          "& .MuiDataGrid-footerContainer": {
+            backgroundColor: theme.palette.background.alt,
+            color: theme.palette.secondary[100],
+            borderTop: "none",
+          },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${theme.palette.secondary[200]} !important`,
+          },
+        }}
+      >
         <DataGrid
         loading={isLoading || !data}
         getRowId={(row) => row._id}
@@ -48,6 +85,7 @@ const Customers = () => {
         columns={columns}
         >
         </DataGrid>
+        </Box>
         </Box>
     </div>
   )

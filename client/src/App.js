@@ -9,6 +9,7 @@ import Layout from "./scenes/layout/index";
 import Dashboard from "./scenes/dashboard/index";
 import Products from "./scenes/products/index.jsx"
 import Customers from "./scenes/customers/index.jsx"
+import Home from "./scenes/home/index.jsx";
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
@@ -20,7 +21,8 @@ function App() {
           <CssBaseline/>
           <Routes>
             <Route element={<Layout/>}>
-              <Route path="/" element={<Navigate to="/dashboard" replace />}/>
+              <Route path="/" element={<Navigate to="/home" replace />}/>
+              <Route path="/home" element={<Home/>}/>
               <Route path="/dashboard" element={<Dashboard/>}/>
               <Route path="/products" element={<Products />}/>
               <Route path="/customers" element={<Customers />}/>

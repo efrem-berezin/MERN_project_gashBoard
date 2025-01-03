@@ -10,6 +10,7 @@ import Dashboard from "./scenes/dashboard/index";
 import Products from "./scenes/products/index.jsx"
 import Customers from "./scenes/customers/index.jsx"
 import Home from "./scenes/home/index.jsx";
+import Transactions from "./scenes/transactions/index.jsx"
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
@@ -21,11 +22,12 @@ function App() {
           <CssBaseline/>
           <Routes>
             <Route element={<Layout/>}>
-              <Route path="/" element={<Navigate to="/home" replace />}/>
-              <Route path="/home" element={<Home/>}/>
+              <Route path="/" element={<Navigate to="/dashboard" replace />}/>
+              
               <Route path="/dashboard" element={<Dashboard/>}/>
               <Route path="/products" element={<Products />}/>
               <Route path="/customers" element={<Customers />}/>
+              <Route path="/transactions" element={<Transactions/>}></Route>
             </Route>
           </Routes>
         </ThemeProvider>

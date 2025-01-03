@@ -13,7 +13,7 @@ const Home = () => {
         <div>
            <h1>Demo portfolio  project </h1>
            <div>
-           {formInReg ? <FormSignIn/> : <FormSignUp/>}
+           
            </div>
         </div>
     )

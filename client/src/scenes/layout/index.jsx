@@ -15,12 +15,12 @@ const Layout = () => {
   const { data } = useGetUserQuery(userId)
   const [ isHomePage, setIsHomePage] = useState(true);
 
-  if(isHomePage){ 
-    return (
-      <Home/>
-    )
+  // if(isHomePage){ 
+  //   return (
+  //     <Home/>
+  //   )
     
-  } 
+  // } 
 
   return  <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
     if()

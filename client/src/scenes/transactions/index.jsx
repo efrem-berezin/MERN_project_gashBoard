@@ -19,7 +19,7 @@ const Transactions = () => {
     const { data, isLoading } = useGetTransactionsQuery({
         page, 
         pageSize, 
-        sort: JSON.stringify(sort), 
+        sort: JSON.stringify(sort),
         search,
     })
 
@@ -54,6 +54,7 @@ const Transactions = () => {
         renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
       },
     ];
+    
     return <div>
         <Box>
             <Header title="TRANSACTIONS" subtitle="Entire list of transactions" />
@@ -103,7 +104,7 @@ const Transactions = () => {
           slots={{
             toolbar: DataGridCustomToolbar
           }}
-          slotsProps={{
+          slotProps={{
             toolbar: { searchInput, setSearchInput, setSearch },
           }}
         />

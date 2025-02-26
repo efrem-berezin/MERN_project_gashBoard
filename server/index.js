@@ -10,6 +10,7 @@ import generalRoutes from './routes/general.js'
 import managmentRoutes from './routes/managment.js'
 import salesRoutes from './routes/sales.js'
 
+
 // data imports
 import User from "./models/User.js"
 import Product from "./models/Product.js"
@@ -34,6 +35,7 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/managment", managmentRoutes);
 app.use("/sales", salesRoutes);
+
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;

@@ -11,7 +11,7 @@ import Products from "./scenes/products/index.jsx"
 import Customers from "./scenes/customers/index.jsx"
 import Home from "./scenes/home/index.jsx";
 import Transactions from "./scenes/transactions/index.jsx"
-import Geography from "./scenes/geography/index"
+import Geography from "./scenes/geography/index.jsx"
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
